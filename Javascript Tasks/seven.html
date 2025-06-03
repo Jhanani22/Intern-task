@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <script>
+    function calculate(operation, num1, num2) {
+    let result;
+    switch (operation) {
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            if (num2 === 0) {
+                console.log("Error: Division by zero is not allowed.");
+                return;
+            }
+            result = num1 / num2;
+            break;
+        default:
+            console.log("Error: Invalid operation.");
+            return;
+    }
+    alert(`${num1} ${operation} ${num2} = ${result}`);
+}
+
+let operation = prompt("Enter operator: ");
+let num1 = parseFloat(prompt("Enter first number: "));
+let num2 = parseFloat(prompt("Enter second number: "));
+
+calculate(operation, num1, num2);
+</script>
+</body>
+</html>

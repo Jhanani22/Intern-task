@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larger number in Array</title>
+</head>
+<body>
+    <script>
+        function findLarge(arr){
+            let max=arr[0];
+            for(let i=1;i<arr.length;i++){
+                if(arr[i]>max){
+                    max=arr[i];
+                }
+
+            }
+            return max;
+        }
+        const num=[20,45,67,12,99,101];
+        alert(findLarge(num))
+    </script>
+</body>
+</html>
